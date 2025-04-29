@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental System Documentation</title>
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="styles.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">CarRental Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cars">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rental">Rental Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="logoutBtn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold">Welcome to CarRental Pro</h1>
+                    <p class="lead">Your trusted partner for premium car rental services</p>
+                    <a href="#cars" class="btn btn-primary btn-lg">Explore Cars</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="cars" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Fleet</h2>
+            <div class="row g-4">
+                <!-- Luxury Sedan -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./luxury sedan.webp" class="card-img-top" alt="Luxury Car">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Sedan</h5>
+                            <p class="card-text">Experience comfort and style with our premium luxury sedans.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-car"></i> Automatic Transmission</li>
+                                <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                                <li><i class="fas fa-gas-pump"></i> Fuel Efficient</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$120/day</span>
+                                <button class="btn btn-primary rent-btn" data-car="luxury-sedan">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./suv car.jpeg" class="card-img-top" alt="SUV">
+                        <div class="card-body">
+                            <h5 class="card-title">SUV</h5>
+                            <p class="card-text">Perfect for family trips and outdoor adventures.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-car"></i> Spacious Interior</li>
+                                <li><i class="fas fa-snowflake"></i> Climate Control</li>
+                                <li><i class="fas fa-shield-alt"></i> Advanced Safety</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$150/day</span>
+                                <button class="btn btn-primary rent-btn" data-car="suv">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./sports car.jpeg" class="card-img-top" alt="Sports Car">
+                        <div class="card-body">
+                            <h5 class="card-title">Sports Car</h5>
+                            <p class="card-text">For those who love speed and performance.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-tachometer-alt"></i> High Performance</li>
+                                <li><i class="fas fa-car"></i> Manual/Automatic</li>
+                                <li><i class="fas fa-shield-alt"></i> Premium Safety</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$200/day</span>
+                                <button class="btn btn-primary rent-btn" data-car="sports-car">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./electric car.webp" class="card-img-top" alt="Electric Car">
+                        <div class="card-body">
+                            <h5 class="card-title">Electric Car</h5>
+                            <p class="card-text">Environmentally friendly and cost-effective.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-bolt"></i> Electric Power</li>
+                                <li><i class="fas fa-leaf"></i> Zero Emissions</li>
+                                <li><i class="fas fa-charging-station"></i> Fast Charging</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$130/day</span>
+                                <button class="btn btn-primary rent-btn" data-car="electric-car">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./luxury suv.webp" class="card-img-top" alt="Luxury SUV">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury SUV</h5>
+                            <p class="card-text">Premium comfort meets powerful performance.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-car"></i> Premium Interior</li>
+                                <li><i class="fas fa-snowflake"></i> Climate Control</li>
+                                <li><i class="fas fa-shield-alt"></i> Advanced Safety</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$180/day</span>
+                                <button class="btn btn-primary rent-btn" data-car="luxury-suv">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="./compact car.jpeg" class="card-img-top" alt="Compact Car">
+                        <div class="card-body">
+                            <h5 class="card-title">Compact Car</h5>
+                            <p class="card-text">Perfect for city driving and tight spaces.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-car"></i> Easy Parking</li>
+                                <li><i class="fas fa-gas-pump"></i> Excellent Mileage</li>
+                                <li><i class="fas fa-shield-alt"></i> Safety Features</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">$80/day</span>
+                                <button class="btn btn-primary rent-btn" data-car="compact-car">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="rental" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Rental Process</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="process-step text-center">
+                        <div class="step-number">1</div>
+                        <h4>Choose Your Car</h4>
+                        <p>Browse our fleet and select the perfect vehicle for your needs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step text-center">
+                        <div class="step-number">2</div>
+                        <h4>Book Online</h4>
+                        <p>Fill out the rental form and make your reservation.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-step text-center">
+                        <div class="step-number">3</div>
+                        <h4>Pick Up & Enjoy</h4>
+                        <p>Collect your car and start your journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h4>Get in Touch</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Rd 5 Kphb colony, Hyderabad, India</p>
+                        <p><i class="fas fa-phone"></i> +91 8309901178</p>
+                        <p><i class="fas fa-envelope"></i> nalliravikumar2003@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 CarRental Pro. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="modal fade" id="rentalModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Rent a Car</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="rentalForm">
+                        <div class="mb-3">
+                            <label class="form-label">Selected Car</label>
+                            <input type="text" class="form-control" id="selectedCar" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pick-up Date</label>
+                            <input type="date" class="form-control" id="pickupDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Return Date</label>
+                            <input type="date" class="form-control" id="returnDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Total Cost</label>
+                            <input type="text" class="form-control" id="totalCost" readonly>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="confirmRental">Confirm Rental</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html> 
